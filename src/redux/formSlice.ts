@@ -53,6 +53,11 @@ const formSlice = createSlice({
     loadFormForPreview: (state, action: PayloadAction<FormSchema>) => {
       state.currentForm = action.payload;
     },
+    // NEW: Reducer to reorder fields
+    reorderFields: (state, action: PayloadAction<{ startIndex: number; endIndex: number }>) => {
+        const [reorderedItem] = state.currentForm.fields.splice(action.payload.startIndex, 1);
+        state.currentForm.fields.splice(action.payload.endIndex, 0, reorderedItem);
+    },
   },
 });
 
@@ -63,6 +68,7 @@ export const {
   removeField,
   setSavedForms,
   loadFormForPreview,
+  reorderFields, // Export the new reducer
 } = formSlice.actions;
 
 export default formSlice.reducer;
