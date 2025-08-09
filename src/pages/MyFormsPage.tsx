@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { setSavedForms } from '../redux/formSlice';
@@ -28,7 +28,7 @@ import { FormSchema } from '../types/formTypes';
 import FormPreviewer from '../components/FormPreviewer';
 
 // Define a custom transition component
-const Transition = forwardRef(function Transition(
+const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
     children: React.ReactElement<any, any>;
   },
@@ -171,7 +171,7 @@ const MyFormsPage = () => {
         onClose={handleClosePreviewModal} 
         maxWidth="sm" 
         fullWidth 
-        TransitionComponent={Transition} // Use the custom Transition component
+        TransitionComponent={Transition}
       >
         <DialogTitle>
           <Box display="flex" justifyContent="space-between" alignItems="center">

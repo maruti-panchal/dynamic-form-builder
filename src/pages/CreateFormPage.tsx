@@ -60,7 +60,8 @@ const CreateFormPage = () => {
       <Grid item xs={12}>
         <Typography variant="h4">Form Builder</Typography>
       </Grid>
-      <Grid item xs={4}>
+      {/* The field creation panel will take up full width on small screens and 1/3 on large screens */}
+      <Grid item xs={12} md={4}>
         <Paper elevation={3} sx={{ p: 2 }}>
           <Typography variant="h6" mb={2}>Add New Field</Typography>
           {['text', 'number', 'textarea', 'select', 'radio', 'checkbox', 'date'].map((type) => (
@@ -94,7 +95,8 @@ const CreateFormPage = () => {
           </Button>
         </Paper>
       </Grid>
-      <Grid item xs={8}>
+      {/* The field list panel will take up full width on small screens and 2/3 on large screens */}
+      <Grid item xs={12} md={8}>
         <Paper elevation={3} sx={{ p: 2 }}>
           <Typography variant="h6" mb={2}>Current Form Fields</Typography>
           {currentForm.fields.length === 0 ? (
@@ -137,7 +139,7 @@ const CreateFormPage = () => {
       </Dialog>
       
       {/* Dialog for Saving the form */}
-      <Dialog open={saveDialogOpen} onClose={() => setSaveDialogOpen(false)}>
+      <Dialog open={saveDialogOpen} onClose={() => setSaveDialogOpen(false)} fullScreen={fullScreen}>
         <DialogTitle>Save Form</DialogTitle>
         <DialogContent>
           <TextField
@@ -156,7 +158,7 @@ const CreateFormPage = () => {
         </DialogActions>
       </Dialog>
       
-      {/* NEW: Dialog for Form Preview */}
+      {/* Dialog for Form Preview */}
       <Dialog
         fullScreen={fullScreen}
         open={isPreviewOpen}
