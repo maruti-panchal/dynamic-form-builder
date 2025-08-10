@@ -1,58 +1,55 @@
-📝 Dynamic Form Builder
-This is a dynamic, user-friendly form builder built with React and Redux. It allows users to create and configure custom forms with various field types, set advanced validation rules, and preview how the form will look and behave in real-time. All form configurations are saved and managed in the browser's localStorage.
+# 📝 Dynamic Form Builder
 
+> A **dynamic, user-friendly form builder** built with **React** and **Redux**. Create, customize, and preview forms in real-time — with your data safely stored in **localStorage**.
 
-🚀 Live Demo
-You can view a live version of the project here: https://dynamic-form-builder-chi.vercel.app/
+🌐 **Live Demo:** [**🚀 View Here**](https://dynamic-form-builder-chi.vercel.app/)
 
+---
 
-✨ Features
-Dynamic Form Creation: Add and arrange fields of different types (Text, Number, Textarea, Select, Radio, Checkbox, Date).
+## ✨ Features
 
-Customizable Fields: Configure each field with its own label, required toggle, and default value.
+- 🎯 **Dynamic Form Creation** — Add & arrange fields: `Text`, `Number`, `Textarea`, `Select`, `Radio`, `Checkbox`, `Date`
+- 🛠 **Customizable Fields** — Set label, required toggle, and default value
+- 🛡 **Advanced Validation** — Not empty, min/max length, email format, custom password rules
+- 👀 **Live Preview** — See form updates instantly in a modal
+- 💾 **Local Persistence** — Auto-save forms to **localStorage**
+- 🎨 **Modern UI/UX** — Responsive design with smooth transitions
 
-Advanced Validation: Implement not empty, min/max length, email format, and a custom password rule.
+---
 
-Live Preview: View how the form will appear to end-users in a live-updating modal.
+## 📦 Tech Stack
 
-Local Persistence: All form schemas are saved and retrieved from localStorage, so your forms are always available.
+| **Category**      | **Technologies** |
+|-------------------|------------------|
+| 🎨 Frontend       | React, TypeScript, Redux Toolkit |
+| 🖌 UI Library     | Material UI (MUI) |
+| 🌐 Routing        | react-router-dom |
+| 📝 Form Handling  | react-hook-form |
+| 🛠 Utilities      | date-fns, nanoid |
 
-Modern UI/UX: The application features a clean design with smooth transitions and is fully responsive for all devices.
+---
 
+## 🖥️ Usage & Routes
 
-📦 Tech Stack
-Frontend: React, TypeScript, Redux Toolkit
+- `/create` ➡️ **Form Builder** — Add, configure, and save forms
+- `/myforms` ➡️ **Saved Forms** — View, preview, or delete saved forms
+- `/preview/:id` ➡️ **Form Preview** — Display a single form in a separate view
 
-UI Library: Material UI (MUI)
+---
 
-Routing: react-router-dom
+## ⚙️ Getting Started
 
-Form Handling: react-hook-form
+Follow these steps to run the project locally:
 
-Utility: date-fns, nanoid
-
-🖥️ Usage
-The application has three main routes:
-
-/create: This is the form builder interface where you can dynamically add, configure, and save new forms.
-
-/myforms: This page displays a grid of all your previously saved forms. You can click on a card to see a live preview or delete a form.
-
-/preview/:id: This is an internal route used to display a single form in a separate view.
-
-⚙️ Getting Started
-To run this project locally, follow these steps:
-
-Clone the repository:
+```bash
+# 1️⃣ Clone the repository
 git clone https://github.com/maruti-panchal/dynamic-form-builder
 
-Navigate to the project directory:
+# 2️⃣ Navigate to the project folder
 cd form-builder-app
 
-Install the dependencies:
+# 3️⃣ Install dependencies
 npm install
 
-Start the development server:
+# 4️⃣ Start the development server
 npm start
-
-The application will open in your browser at http://localhost:3000.
